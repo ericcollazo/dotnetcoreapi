@@ -14,7 +14,7 @@ namespace dotnetcoreapi.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "Docker", "DotNet Core", "Linux-Windows-MacOS" };
         }
 
         // GET api/values/5
