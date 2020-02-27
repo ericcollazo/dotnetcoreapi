@@ -1,5 +1,5 @@
 ## Use build image
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2.402-bionic AS build-env
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
 
 ## Set working directory
 WORKDIR /app
@@ -10,7 +10,7 @@ COPY . ./
 RUN dotnet publish -c Release -o out
 
 # build runtime image
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2.7-bionic
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 
 WORKDIR /app
 
